@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import TopBar from '../components/TopBar';
 import FloatStatusCard from '../components/FloatStatusCard';
 import ChatPanel from '../components/ChatPanel';
-import MapCard from '../components/MapCard';
+import MapCard from '../components/MapCard'; // Assuming this is your custom MapCard
 import TimeSeriesCard from '../components/TimeSeriesCard';
 import HeatmapCard from '../components/HeatmapCard';
 import ExportToolbar from '../components/ExportToolbar';
@@ -13,7 +13,7 @@ const RegionDashboard = () => {
 
     return (
         <div className="flex flex-col h-screen bg-gray-100 overflow-hidden text-gray-800 font-sans">
-            {/* TopBar Component  */}
+            {/* TopBar Component */}
             <TopBar />
 
             <div className="flex-1 flex flex-col lg:flex-row p-4 space-y-4 lg:space-y-0 lg:space-x-4 overflow-auto">
@@ -36,7 +36,6 @@ const RegionDashboard = () => {
                                 <p className="text-2xl font-bold text-green-600">95%</p>
                             </div>
                         </div>
-                        
                     </div>
 
                     {/* Float List Card */}
@@ -49,14 +48,12 @@ const RegionDashboard = () => {
                             <p><a href="#" className="text-blue-600 hover:underline">5903934 Active</a> 2023-09-02 0-2000m</p>
                             <p><a href="#" className="text-orange-600 hover:underline">5903935 Error</a> 2023-09-01 0-2000m</p>
                         </div>
-                        {/* <FloatStatusCard type="list" /> */}
                     </div>
 
                     {/* Robot Status Card */}
                     <div className="bg-white rounded-lg shadow-md p-4 flex-none">
                         <h2 className="text-xl font-semibold mb-2 text-gray-800">Robot Status</h2>
                         <p className="text-gray-700">Status details here...</p>
-                        {/* <FloatStatusCard type="robot-status" /> */}
                     </div>
                 </div>
 
@@ -104,7 +101,8 @@ const RegionDashboard = () => {
                     {/* Map Card - Removed fixed height to let flexbox manage sizing */}
                     <div className="bg-white rounded-lg shadow-md p-4 flex-1">
                         <h2 className="text-xl font-semibold mb-2 text-gray-800">Map</h2>
-                        <MapCard regionId={regionId} />
+                        {/* Pass a 'light' theme prop to MapCard */}
+                        <MapCard regionId={regionId} theme="light" /> 
                     </div>
 
                     {/* Time Series Card */}
