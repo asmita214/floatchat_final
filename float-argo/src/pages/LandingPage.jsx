@@ -52,12 +52,12 @@ const LandingPage = () => {
             <div className="absolute top-1/2 right-8 -translate-y-1/2 z-[1000]">
                 <button
                     className="bg-gray-800 text-white rounded-2xl px-6 py-4 font-bold text-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
-                    onClick={() => navigate('/dashboard/indian-ocean')}
+                    onClick={() => window.location.href = 'https://frolicking-cobbler-92c2c3.netlify.app/'}
                 >
                     Explore Data
                 </button>
             </div>
-        </div>
+        </div> 
     );
 };
 
